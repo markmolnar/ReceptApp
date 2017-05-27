@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf.unideb.hu.view.RecipeViewController">
+   <children>
+      <GridPane layoutX="51.0" layoutY="63.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="186.99996948242188" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.0000152587891" minWidth="10.0" prefWidth="403.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.6666259765625" minWidth="10.0" prefWidth="241.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.6666259765625" minWidth="10.0" prefWidth="241.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="49.66667175292969" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="102.99999237060547" minHeight="3.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="110.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="269.0" minHeight="0.0" prefHeight="146.66665649414062" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="287.0" minHeight="0.0" prefHeight="43.666656494140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="392.0" minHeight="10.0" prefHeight="294.3333435058594" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="209.0" text="Név:" />
+            <TextField fx:id="nameField" prefHeight="25.0" prefWidth="143.0" GridPane.columnIndex="1" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="227.0" text="Elkészítési idő:" GridPane.rowIndex="1" />
+            <TextField fx:id="prepareTimeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="Timeunits" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="72.0" prefWidth="207.0" text="Kép:" GridPane.rowIndex="2" />
+            <Button fx:id="pictureButton" mnemonicParsing="false" onAction="#handlePictureselect" prefHeight="25.0" prefWidth="150.0" text="Kép hozzáadása..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="filepathField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="225.0" prefWidth="220.0" text="Recept:" GridPane.rowIndex="5" />
+            <TextArea fx:id="descriptionArea" prefHeight="177.0" prefWidth="217.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="237.0" text="Adag" GridPane.rowIndex="4" />
+            <ChoiceBox fx:id="PersonNumber" prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="216.0" prefWidth="208.0" text="Hozzávalók:" GridPane.rowIndex="3" />
+            <TableView fx:id="ingredientTable" prefHeight="191.0" prefWidth="172.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="2">
+              <columns>
+                <TableColumn fx:id="namecolumn" minWidth="0.0" prefWidth="329.0" text="étel" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <ChoiceBox fx:id="IngredientGroupname" prefHeight="25.0" prefWidth="82.0" />
+                  <ChoiceBox fx:id="IngredientName" prefHeight="25.0" prefWidth="92.0" />
+                  <TextField fx:id="ingredientquantityField" prefHeight="25.0" prefWidth="91.0" />
+                  <ChoiceBox fx:id="IngredientQuantityUnits" prefHeight="25.0" prefWidth="138.0" />
+                  <Button fx:id="addButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleadd" prefHeight="25.0" prefWidth="73.0" text="&gt;">
+                     <FlowPane.margin>
+                        <Insets left="300.0" top="70.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+      </GridPane>
+      <Button fx:id="saveButton" layoutX="1110.0" layoutY="662.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="25.0" prefWidth="130.0" text="Mentés" />
+      <Button fx:id="backButton" layoutY="4.0" mnemonicParsing="false" onAction="#handleBack" text="Vissza" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

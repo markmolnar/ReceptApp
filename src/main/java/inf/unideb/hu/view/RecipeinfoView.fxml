@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="recipe-info-stage" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf.unideb.hu.view.RecipeinfoViewController">
+   <children>
+      <ImageView fx:id="image" fitHeight="183.0" fitWidth="268.0" layoutX="22.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="321.0" layoutY="43.0" prefHeight="42.0" prefWidth="154.0" text="Elkészítési idő:" />
+      <Label layoutX="322.0" layoutY="78.0" prefHeight="38.0" prefWidth="107.0" text="Adag: " />
+      <Label layoutX="322.0" layoutY="110.0" prefHeight="32.0" prefWidth="82.0" text="Leírás:" />
+      <TextArea fx:id="descriptionArea" editable="false" layoutX="392.0" layoutY="133.0" prefHeight="325.0" prefWidth="387.0" />
+      <TextField fx:id="timeField" editable="false" layoutX="445.0" layoutY="52.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="personField" editable="false" layoutX="444.0" layoutY="84.0" prefHeight="25.0" prefWidth="201.0" />
+      <Label layoutX="426.0" layoutY="491.0" text="Energia: " />
+      <Label layoutX="431.0" layoutY="538.0" prefHeight="15.0" prefWidth="52.0" text="Zsír: " />
+      <Label layoutX="583.0" layoutY="537.0" prefHeight="15.0" prefWidth="59.0" text="Protein: " />
+      <Label layoutX="576.0" layoutY="492.0" text="Szénhidrát: " />
+      <TextField fx:id="energyField" editable="false" layoutX="486.0" layoutY="486.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="totalfatField" editable="false" layoutX="488.0" layoutY="533.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="carbohydrateField" editable="false" layoutX="667.0" layoutY="487.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="proteinField" editable="false" layoutX="670.0" layoutY="533.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextArea fx:id="ingredientText" editable="false" layoutX="56.0" layoutY="247.0" prefHeight="225.0" prefWidth="240.0" />
+   </children>
+</AnchorPane>

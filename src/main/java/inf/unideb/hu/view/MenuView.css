@@ -1,0 +1,86 @@
+.root{
+    -fx-background-color: #F0E68C;
+}
+
+#anchor {
+	-fx-background-color: #F0E68C;
+}
+
+#recipe-info-stage
+{
+	-fx-background-color: #F0E68C;
+}
+
+
+
+.table-view .column-header{
+    -fx-background-color: #D2691E;
+    -fx-text-fill: white;
+    -fx-font-weight:bold;
+}
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-weight:bold;
+}
+.table-view
+{
+	
+	-fx-background-color:#F0E68C;
+}
+.table-row-cell{
+    -fx-background-color:#F0E68C;
+    -fx-table-cell-border-color:black;
+}
+
+.table-row-cell:selected{
+    -fx-background-color:blue;
+}
+.gridpane
+{
+	-fx-background-color:#F0E68C;
+}
+.button
+{
+	-fx-base:#D2691E;
+	-fx-text-fill: white;
+	-fx-font-size: 14pt;
+	-fx-font-weight:bold;
+}
+.choice-box
+{
+	-fx-base:#D2691E;
+	-fx-mark-color: white;
+}
+.choice-box .context-menu
+{
+	-fx-background-color:#D2691E;
+}
+.choice-box .label
+{
+	-fx-text-fill: white;
+	-fx-font-weight:bold;
+}
+#add-picture-button
+{
+	-fx-base:#D2691E;
+	-fx-text-fill: white;
+	-fx-font-size: 8pt;
+	-fx-font-weight:bold;
+}
+#file-path-field
+{
+	-fx-text-fill:#CAC1C1;
+}
+.TextField
+{
+	-fx-control-inner-background:#F0E68C;
+}
+
+.table-column {
+	-fx-text-fill:black;
+	-fx-border-color:grey;
+  	-fx-alignment: CENTER-LEFT;
+}
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
