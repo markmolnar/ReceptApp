@@ -20,6 +20,10 @@
 		</license>
 	</licenses>
   
+	<scm>
+      		<connection>scm:git:https://markmolnar@github.com/ReceptApp.git</connection>
+      		<developerConnection>scm:git:https://markmolnar@github.com/ReceptApp.git</developerConnection>
+    	</scm>
 	<inceptionYear>2017</inceptionYear>
 	<organization>
 		<name>Faculty of Informatics, University of Debrecen</name>
