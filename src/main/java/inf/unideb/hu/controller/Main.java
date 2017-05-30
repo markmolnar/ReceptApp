@@ -66,7 +66,8 @@ public class Main extends Application {
 		 try {
 			 	LOGGER.info("Loading the root view");
 	            FXMLLoader loader = new FXMLLoader();
-	            loader.setLocation(Main.class.getResource("/inf/unideb/hu/view/RootView.fxml"));
+	            //loader.setLocation(Main.class.getResource("RootView.fxml"));
+	            loader.setLocation(Main.class.getResource("/RootView.fxml"));
 	            rootView = (BorderPane) loader.load();
 	            Scene scene = new Scene(rootView);
 	            primaryStage.setScene(scene);
@@ -87,7 +88,7 @@ public class Main extends Application {
 		try {
 				LOGGER.info("Loading the menu view");
 	            FXMLLoader loader = new FXMLLoader();
-	            loader.setLocation(Main.class.getResource("/inf/unideb/hu/view/MenuView.fxml"));
+	            loader.setLocation(Main.class.getResource("/MenuView.fxml"));
 	            menuview = (AnchorPane) loader.load();
 	            rootView.setCenter(menuview);
 	            MenuViewController controller = loader.getController();
@@ -106,7 +107,7 @@ public class Main extends Application {
 		try {
 				LOGGER.info("Loading the search view");
 	            FXMLLoader loader = new FXMLLoader();
-	            loader.setLocation(Main.class.getResource("/inf/unideb/hu/view/SearchView.fxml"));
+	            loader.setLocation(Main.class.getResource("/SearchView.fxml"));
 	            AnchorPane searchview = (AnchorPane) loader.load();
 	            //searchview.getStyleClass().add("search-view");
 	            rootView.setCenter(searchview);
@@ -126,16 +127,16 @@ public class Main extends Application {
 		try {
 				LOGGER.info("Loading the recipe view");
 	            FXMLLoader loader = new FXMLLoader();
-	            loader.setLocation(Main.class.getResource("/inf/unideb/hu/view/RecipeView.fxml"));
+	            loader.setLocation(Main.class.getResource("/RecipeView.fxml"));
 	            AnchorPane recipeview = (AnchorPane) loader.load();
 	            
 	            rootView.setCenter(recipeview);
 	            RecipeViewController controller = loader.getController();
 	            controller.setMainApp(this);
 	        } catch (IOException e) {
-	            //e.printStackTrace();
-	        	LOGGER.severe("Error initializing the recipe view.");
-	            LOGGER.severe(e.getMessage());
+	            e.printStackTrace();
+	        	//LOGGER.severe("Error initializing the recipe view.");
+	            //LOGGER.severe(e.getMessage());
 	        }
 	}
 

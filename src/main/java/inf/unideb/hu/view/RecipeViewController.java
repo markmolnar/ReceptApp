@@ -5,7 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
-
 import org.apache.commons.lang3.StringUtils;
 
 import inf.unideb.hu.controller.Main;
@@ -189,10 +188,8 @@ public class RecipeViewController {
 	 private void initialize() {
 		 fileConverter = new FileConverter();
 		 isThereIngredient = false;
-		 pictureFile = new File(classLoader.getResource("fork.jpg").getFile());
 		 Timeunits.setItems(FXCollections.observableArrayList("perc", "óra"));
 		 PersonNumber.setItems(FXCollections.observableArrayList(1, 2, 3, 4));
-		 filepathField.setText("fork.jpg");
 		 pictureButton.setId("add-picture-button");
 		 filepathField.setId("file-path-field");
 
@@ -233,11 +230,6 @@ public class RecipeViewController {
 		if(pictureFile != null) {
 			filepathField.setStyle("-fx-text-fill:black;");
 			filepathField.setText(pictureFile.getPath());
-		}
-
-		else {
-			filepathField.setText("fork.jpg");
-			pictureFile = new File(classLoader.getResource("fork.jpg").getFile());
 		}
 	}
 
@@ -350,6 +342,9 @@ public class RecipeViewController {
 		String errormessage = "";
 		if(nameField.getText() == null||nameField.getText().length() == 0) {
 			errormessage += "Név megadása kötelező\n";
+		}
+		if(pictureFile == null) {
+			errormessage += "Kép megadása kötelező\n";
 		}
 		if(prepareTimeField.getText() == null||prepareTimeField.getText().length() == 0) {
 			errormessage += "Elkészítési idő megadása kötelező\n";

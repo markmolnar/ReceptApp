@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf.unideb.hu.view.SearchViewController">
+   <children>
+      <SplitPane dividerPositions="0.33277591973244147" layoutX="151.0" layoutY="68.0" prefHeight="768.0" prefWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane id="anchor" minHeight="0.0" minWidth="380.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="backButton" layoutY="2.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="44.0" prefWidth="126.0" text="Vissza" />
+                  <Label layoutX="52.0" layoutY="121.0" prefHeight="15.0" prefWidth="46.0" text="Név: " />
+                  <TextField fx:id="nameField" layoutX="86.0" layoutY="118.0" />
+                  <Button fx:id="searchbutton" layoutX="126.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleSearch" text="Keresés" />
+                  <Button fx:id="deleteButton" layoutX="257.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleDelete" text="Törlés" />
+                  <Label layoutX="53.0" layoutY="161.0" text="Szénhidráttartalom:" />
+                  <Label layoutX="52.0" layoutY="205.0" text="Min:" />
+                  <Label layoutX="207.0" layoutY="205.0" text="Max" />
+                  <TextField fx:id="minCarboField" layoutX="90.0" layoutY="200.0" prefHeight="25.0" prefWidth="52.0" />
+                  <TextField fx:id="maxCarboField" layoutX="244.0" layoutY="200.0" prefHeight="25.0" prefWidth="52.0" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="528.0">
+               <children>
+                  <TableView fx:id="foodTable" layoutX="14.0" layoutY="14.0" prefHeight="598.0" prefWidth="528.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="imagecolumn" editable="false" prefWidth="70.0" resizable="false" text="Kép" />
+                      <TableColumn fx:id="namecolumn" editable="false" minWidth="1000.0" prefWidth="1000.0" text="Étel Név" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -37,7 +37,7 @@ public class FileConverter {
 	public byte[] FileToArray(File file) {
 		byte[] byteFile = new byte[(int) file.length()];
 		try {
-			FileInputStream fileInputStream = new FileInputStream(file);
+			FileInputStream fileInputStream = new FileInputStream(file.getAbsolutePath());
 			fileInputStream.read(byteFile);
 			fileInputStream.close();
 			} catch (Exception e) {

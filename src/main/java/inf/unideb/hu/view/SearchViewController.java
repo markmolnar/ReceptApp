@@ -191,7 +191,7 @@ public class SearchViewController {
 	public void showRecipeDialog(Food food) {
 		try {	
 			LOGGER.info("Loading the recipe info view");
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/inf/unideb/hu/view/RecipeinfoView.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/RecipeinfoView.fxml"));
 			AnchorPane page = loader.load();
 			page.setStyle("-fx-background-color: #F0E68C");
 

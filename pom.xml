@@ -78,6 +78,11 @@
   			<artifactId>commons-lang3</artifactId>
   			<version>3.5</version>
 		</dependency>
+		<dependency>
+    		<groupId>javax.interceptor</groupId>
+    		<artifactId>javax.interceptor-api</artifactId>
+    		<version>1.2</version>
+		</dependency>
 	</dependencies>
   
   
@@ -91,6 +96,15 @@
       			<outputEncoding>UTF-8</outputEncoding>
     		</configuration>
   	</plugin>
+  	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>3.1</version>
+		<configuration>
+			<source>1.8</source>
+			<target>1.8</target>
+		</configuration>
+	</plugin>
   		<plugin>
   			<groupId>com.zenjava</groupId>
     		<artifactId>javafx-maven-plugin</artifactId>
@@ -131,6 +145,8 @@
         </executions>
       </plugin>
       
+     
+     
      <plugin>
       	<groupId>org.jacoco</groupId>
       	<artifactId>jacoco-maven-plugin</artifactId>
@@ -141,14 +157,14 @@
       	</configuration>
       	<executions>
             <execution>
-                <id>default-prepare-agent</id>
+            	<id>pre-unit-test</id>
                 <goals>
                     <goal>prepare-agent</goal>
                 </goals>
             </execution>
             <execution>
-                <id>default-report</id>
-                <phase>prepare-package</phase>
+                <id>post-unit-test</id>
+                <phase>test</phase>
                 <goals>
                     <goal>report</goal>
                 </goals>
@@ -178,16 +194,28 @@
 			</execution>
 		</executions>
 	</plugin>
-      
-      
+        
   	</plugins>
+  	
   </build>
    <reporting>
     <plugins>
+		 <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.10.4</version>
+		</plugin>
+    
+		<plugin>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.7.9</version>
+		</plugin>
+     
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.5</version>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jxr-plugin</artifactId>
+			<version>2.5</version>
       </plugin>
       
       <plugin>
